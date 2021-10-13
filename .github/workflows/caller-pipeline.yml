@@ -1,17 +1,11 @@
 name: Call a reusable workflow
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
 
 jobs:
   call-workflow:
-    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
-
-  call-workflow-passing-data:
-    uses: octo-org/example-repo/.github/workflows/workflow-B.yml@main
-    with:
-      username: mona
-    secrets:
-      token: ${{ secrets.TOKEN }}
+    uses: mowies/reuse-workflow-test-called/.github/workflows/called-pipeline.yml@master
