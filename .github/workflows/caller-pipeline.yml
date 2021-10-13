@@ -8,4 +8,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: mowies/reuse-workflow-test-called/.github/workflows/called-pipeline.yml@master
+    uses: mowies/reuse-workflow-test-called/.github/workflows/called-pipeline.yml@main
